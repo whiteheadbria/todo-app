@@ -1,6 +1,7 @@
 button {
-    background-color: purple;
+    background-color: #c6c6c6;
+    border-color: #111111;
     font-size: medium;
-    color: black;
+    color: #00A19c;
     width: 44px;
 }
