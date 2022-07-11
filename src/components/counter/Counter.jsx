@@ -1,19 +1,20 @@
 import React, {Component} from 'react'
 import './Counter.css'
 
-class Counter extends Component() {
+class Counter extends Component {
     // Defines inital state in a constructor
     // state => counter 0
 
 constructor () {
     super(); // Error 1
 
-    this.state ={
+    this.state = {
         counter: 0
     }
 
     this.increment = this.increment.bind(this);
 }
+
     render() { //what we're returning back
     return (
         <div className="counter">
@@ -27,9 +28,10 @@ constructor () {
 // console.log('increment')
 increment() { 
     this.setState ( {
-    counter: this.state.counter +1
+    counter: this.state.counter + 1
+});
+
 }
-    );
 }
-}
+
 export default Counter
