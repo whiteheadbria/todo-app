@@ -12,6 +12,7 @@ class App extends Component  {
   render() {
   return (
     <div className="App">
+    <Counter />
     <Counter by= {1} />
     <Counter by={2}/>
     <Counter by={3}/>
