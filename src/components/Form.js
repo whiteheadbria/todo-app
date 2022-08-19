@@ -1,13 +1,19 @@
 import React from "react";
 
 
-const Form = () => {
+const Form = ({setInputText}) => {
+    // Here I can write javascript code and function
+    const inputTextHandler = (e) => {
+        console.log(e.target.value); 
+        setInputText(e.target.value);
+    }; //just using e as the event. what just happened on that event
+
     return (
         <form>
-            <input type ="text" className="todo-input" />
+            <input onClick={inputTextHandler} type="text" className="todo-input" />
             <button className ="todo-button" type="submit">
-                <i className="fa fa-close"></i>
-            </button>
+            <i className="fa-solid fa-plus"></i>
+            </button> 
 
             <div className ="select">
                 <select name="todos" className="filter-todo">
