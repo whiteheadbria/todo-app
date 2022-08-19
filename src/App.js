@@ -6,14 +6,18 @@ import Form from "./components/Form";
 import TodoList from "./components/TodoList";
 
 function App() {
-  const [inputText, setInputText] = useState("");
+  const[inputText, setInputText] = useState(""); 
+const[todos, setTodos] = useState([]); // store todos, an array of objects
+
   return (
     <div className="App">
     <header>
       <h1>Bria's To-Do List</h1>
       </header>
-      <Form setInputText = {setInputText} />  {/*taking setInputText and passing it into Form
-                                                so we have access in Form.js*/}
+      <Form inputText={inputText} setInputText={setInputText} todos={todos} setTodos={setTodos}/>  
+      {/*taking setInputText and passing it into Form so we have access in Form.js*/}
+      {/*same keeping same variable name as the object */ }
+
       <TodoList />
     </div>
   );
