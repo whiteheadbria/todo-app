@@ -14,11 +14,16 @@ const[todos, setTodos] = useState([]); // store todos, an array of objects
     <header>
       <h1>Bria's To-Do List</h1>
       </header>
-      <Form inputText={inputText} setInputText={setInputText} todos={todos} setTodos={setTodos}/>  
+      <Form inputText={inputText} 
+      setInputText={setInputText} 
+      todos={todos} 
+      setTodos={setTodos}
+      />  
       {/*taking setInputText and passing it into Form so we have access in Form.js*/}
       {/*same keeping same variable name as the object */ }
 
-      <TodoList />
+      <TodoList todos={todos}/>
+      {/*passing that data down to be accessible in TodoList.js component*/}
     </div>
   );
 }
