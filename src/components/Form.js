@@ -1,11 +1,10 @@
 import React from "react";
 
 //import / passing it to a prop 
-const Form = ({setInputText, inputText, todos, setTodos}) => {
+const Form = ({setInputText, inputText, todos, setTodos, setStatus}) => {
     // Here I can write javascript code and function
     const inputTextHandler = (e) => {
-        console.log(e.target.value); 
-        setInputText(e.target.value);
+        setInputText(e.target.value)
     }; //just using e as the event. what just happened on that event
 
     const submitTodoHandler = (e) => {
@@ -17,6 +16,11 @@ const Form = ({setInputText, inputText, todos, setTodos}) => {
         setInputText(" "); //sets state back to 0
     }
 
+    const statusHandler = (e) => {
+        setStatus(e.target.value) //e.target.value shows in console the name of event that's happening. so it will show either all, completed, uncompleted
+
+    }
+
     return (
         <form>
             <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
@@ -25,10 +29,10 @@ const Form = ({setInputText, inputText, todos, setTodos}) => {
             </button> 
 
             <div className ="select">
-                <select name="todos" className="filter-todo">
+                <select onChange={statusHandler} name="todos" className="filter-todo">
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
-                    <option value="uncompleted">Uncompleted </option>
+                    <option value="uncompleted">Not Completed</option>
                 </select>
             </div>
         </form>
