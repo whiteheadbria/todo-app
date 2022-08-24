@@ -68,7 +68,7 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-  background: #ff6f47; 
+  background: #3f373c; 
   color: #fcfaf0;
   border: none;
   padding: 1rem;
@@ -76,7 +76,7 @@ form button:hover {
   font-size: 1rem;
 }
 .complete-btn {
-  background: rgb(11, 212, 162);
+  background: #e8e1d7;
 }
 .todo-item {
   padding: 0rem 0.5rem;
